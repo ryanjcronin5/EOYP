@@ -1,10 +1,9 @@
-import numpy as np
-import pandas as pd
 from functions import *
-import threading as th
-
-class root:
-    pass
+from time import perf_counter
 
 if __name__ == "__main__":
-    root()
+    start_time = perf_counter()
+    functions.TCF()
+    end_time = perf_counter()
+    print(f'It took {end_time- start_time :0.4f} second(s) to complete.')
+    
