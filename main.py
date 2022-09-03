@@ -1,9 +1,16 @@
 from functions import *
 from time import perf_counter
 
+MAXCARDS = 9
+MAXPOINTS = 25
+MINPOINTS = 1
+NAMELIMIT = r"^[a-zA-Z0-9]*$"
+eFlag = 0
+iFlag = 0
+day = date.today()
+today = day.strftime("%d - %m - %y")
+
+
+
 if __name__ == "__main__":
-    start_time = perf_counter()
-    functions.TCF()
-    end_time = perf_counter()
-    print(f'It took {end_time- start_time :0.4f} second(s) to complete.')
-    
+    functions.main()
