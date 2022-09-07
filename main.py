@@ -1,10 +1,17 @@
-import numpy as np
-import pandas as pd
 from functions import *
-import threading as th
+from time import perf_counter
+from datetime import date
 
-class root:
-    pass
+MAXCARDS = 9
+MAXPOINTS = 25
+MINPOINTS = 1
+NAMELIMIT = r"^[a-zA-Z0-9]*$"
+eFlag = 0
+iFlag = 0
+day = date.today()
+today = day.strftime("%d - %m - %y")
+
+
 
 if __name__ == "__main__":
-    root()
+    functions.main()
