@@ -54,11 +54,12 @@ class functions():
         
         Y1=30
         Y=51
+        R = 0
         for row in functions.df.index:
             Y2 = Y1+30
             Y = Y+30
             draw.create_rectangle(0,Y1,140,Y2,fill='white')
-            Radiobutton(functions.root, text=functions.df[functions.columnName[0]][row], indicatoron = 0, variable=functions.record, bg='white', bd=0, font=MYFONT, command=functions.UAR, value=functions.df[functions.columnName[0]][row]).place(x=11,y=Y)
+            Radiobutton(functions.root, text=functions.df[functions.columnName[0]][row], indicatoron = 0, variable=functions.record, bg='white', bd=0, font=MYFONT, command=functions.UAR, value=R).place(x=11,y=Y)
             draw.create_rectangle(140,Y1,245,Y2,fill='white')
             Label(functions.root, text=functions.df[functions.columnName[1]][row], bg='white', font=MYFONT).place(x=151,y=Y)
             draw.create_rectangle(245,Y1,350,Y2,fill='white')
@@ -70,6 +71,7 @@ class functions():
             draw.create_rectangle(560,Y1,630,Y2,fill='white')
             Label(functions.root, text=functions.df[functions.columnName[5]][row], bg='white', font=MYFONT).place(x=571,y=Y)
             Y1 = Y1+30
+            R = R+1
         Y2 = Y1+31
         Y = Y+31
         draw.create_rectangle(0,Y1,140,Y2,fill='white')
@@ -109,7 +111,7 @@ class functions():
 
 
     def UAR(): # User Add Record
-        print(functions.record)
+        print(functions.record.get())
         
 
 
